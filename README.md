@@ -5,10 +5,10 @@ Documento descritivo dos requisitos e artefatos que compõem a entrega da unidad
 ---
 
 ## 👥 Integrantes do Grupo
-* **Gabriel Andrade Carvalho,
-* **Guilherme Bernardes Camilo,
-* **Erick Gabriel Cardoso Oliveira, 
-* **Gabriel Ribeiro Gomes.
+* Gabriel Andrade Carvalho,
+* Guilherme Bernardes Camilo,
+* Erick Gabriel Cardoso Oliveira, 
+* Gabriel Ribeiro Gomes.
 
 ---
 
