@@ -2,7 +2,7 @@
 
 ## 🎨 Protótipo e Wireframes no Figma
 
-🔗 **Acesse o projeto completo no Figma:** https://www.figma.com/make/Uc0TzOa6sKBdSimsg0rgEi/Wireframes-para-Gest%C3%A3o-de-Condom%C3%ADnio
+🔗 **Acesse o projeto completo no Figma:** [https://www.figma.com/make/Uc0TzOa6sKBdSimsg0rgEi/Wireframes-para-Gest%C3%A3o-de-Condom%C3%ADnio](https://www.figma.com/make/Uc0TzOa6sKBdSimsg0rgEi/Wireframes-para-Gest%25C3%25A3o-de-Condom%25C3%25ADnio?code-node-id=0-6&p=f&t=bWOWpZj4oX4qri3u-0&fullscreen=1)
 
 ---
 
