@@ -9,30 +9,39 @@ Resumo teórico produzido para a disciplina de Programação Orientada a Objetos
 
 ---
 
-## 1. Encapsulamento
+### 1. Encapsulamento
 
-**Definição:** Consiste em agrupar dados (atributos) e comportamentos (métodos) dentro de uma classe, restringindo o acesso direto aos dados internos e expondo apenas uma interface controlada de acesso.
+* **Definição:**  
+  Consiste em agrupar dados (atributos) e comportamentos (métodos) dentro de uma mesma estrutura (classe), ocultando os detalhes internos de implementação e restringindo o acesso direto ao estado do objeto. O mundo externo interage com o objeto apenas por meio de uma interface pública controlada.
 
-**Como funciona na prática:**
-- Atributos são declarados como `private`
-- O acesso externo ocorre via métodos públicos (`getters` e `setters`)
-- Permite validar dados antes de alterá-los (ex.: impedir que uma idade seja negativa)
+* **Fundamentação Bibliográfica:**  
+  > *"Encapsulamento é o processo de esconder todos os detalhes de um objeto que não contribuem para as suas características essenciais. Ele envolve a separação da interface de um objeto de sua implementação."*  
+  > — **SANTOS, Rafael.** *Introdução à Programação Orientada a Objetos Usando Java*, Cap. 1, seção 1.4.
 
-```java
-public class ContaBancaria {
-    private double saldo; // atributo protegido
+  > *"Encapsulamento [...] é um dos benefícios mais palpáveis de programação orientada a objetos."*  
+  > — **SANTOS, Rafael.** *Introdução à Programação Orientada a Objetos Usando Java*, Cap. 1, seção 1.4.
 
-    public double getSaldo() {
-        return saldo;
-    }
+* **Como funciona na prática:**  
+  * Os atributos são declarados com modificador de acesso restrito (`private`).
+  * O acesso e as modificações ocorrem exclusivamente via métodos públicos (*getters*, *setters* ou métodos de regra de negócio).
+  * Permite validar os dados antes de alterar o estado do objeto (ex.: impedir depósitos negativos ou saldos inválidos).
 
-    public void depositar(double valor) {
-        if (valor > 0) {
-            saldo += valor;
-        }
-    }
-}
-```
+* **Exemplo em Java:**
+  ```java
+  public class ContaBancaria {
+      private double saldo; // Atributo privado / encapsulado
+
+      public double getSaldo() {
+          return saldo;
+      }
+
+      // Método público com validação de regra de negócio
+      public void depositar(double valor) {
+          if (valor > 0) {
+              this.saldo += valor;
+          }
+      }
+  }
 
 **Por que importa:** evita que o estado interno do objeto seja corrompido por acessos externos descontrolados, aumentando a segurança e a manutenibilidade do código.
 
