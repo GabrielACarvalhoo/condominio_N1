@@ -40,12 +40,13 @@ O projeto está organizado modularmente para atender aos 4 itens exigidos na ati
 
 ```text
 /
-├── docs/                 # Documentação teórica e artefatos (Itens 1, 2 e 3)
-│   ├── grupo_N_docs.pdf  # PDF consolidado oficial (BMC, Wireframes e Pesquisa POO)
-│   └── figma/            # Prints ou links de referência dos wireframes (Item 2)
+├── docs/                 # Documentação e artefatos da atividade
+│   ├── Business.Model.Canvas.-.Sistem...  # Modelo de negócio do sistema[cite: 15]
+│   ├── ITEM3.md          # Documentação referente ao Item 3[cite: 15]
+│   ├── figma.md          # Referências ou anotações do Figma[cite: 15]
+│   └── grupo_7_docs.pdf  # PDF consolidado oficial do grupo[cite: 15]
 │
-├── src/                  # Código-fonte em Java incremental (Item 4)
-│   └── gestao/           # Classes do domínio (Morador, Unidade, Cobertura, Funcionario, etc.)
+├── src/                  # Código-fonte do projeto[cite: 15]
 │
 ├── .gitignore
-└── README.md             # Visão geral e mapeamento do projeto
+└── README.md             # Visão geral e mapeamento do projeto[cite: 15]
