@@ -128,8 +128,7 @@ public class App {
 
                 System.out.println("Unidade: " + numeroUnidade);
                 System.out.printf("Valor pago: R$ %.2f%n", valor);
-                System.out.printf("Saldo do condomínio: R$ %.2f%n",
-                condominio.getSaldoCaixa());
+                System.out.printf("Saldo do condomínio: R$ %.2f%n",condominio.getSaldoCaixa());
             } else if (opcao == 7) {
                 System.out.print("\nDigite o valor da despesa a pagar: R$ ");
                 double despesa = leitura.nextDouble();
