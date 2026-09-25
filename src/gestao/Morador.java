@@ -1,14 +1,26 @@
 package gestao;
 
 public class Morador {
-    String nome;
-    String cpf;
-    int numeroUnidade;
+    private String nome;
+    private String cpf;
+    private int numeroUnidade;
 
     public Morador(String nome, String cpf, int numeroUnidade) {
         this.nome = nome;
         this.cpf = cpf;
         this.numeroUnidade = numeroUnidade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public int getNumeroUnidade() {
+        return numeroUnidade;
     }
 
     public void exibirDados() {
