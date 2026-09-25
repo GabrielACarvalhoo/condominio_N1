@@ -82,5 +82,4 @@ O **Terminal de Portaria** foi desenvolvido para ser operado com rapidez e preci
 * **Documentação & Versionamento:** Markdown, Git, GitHub
 
 
-## ✒️ Autor
-Desenvolvido por **Gabriel Andrade Carvalho**
+
