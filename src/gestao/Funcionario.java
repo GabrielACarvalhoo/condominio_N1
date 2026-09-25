@@ -20,4 +20,8 @@ public class Funcionario {
     public double getSalarioBase() {
         return salarioBase;
     }
+    @Override
+    public String toString() {
+        return String.format("Funcionário: %s | Salário Base: R$ %.2f", nome, calcularSalario());
+    }
 }
