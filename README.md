@@ -1,61 +1,55 @@
-# 📋 Detalhamento da Atividade Avaliativa - POO
+# 🏢 Sistema de Gestão de Condomínio — Atividade Avaliativa POO
 
-Documento descritivo dos requisitos e artefatos que compõem a entrega da unidade curricular de Programação Orientada a Objetos (POO).
-
----
-
-## 👥 Integrantes do Grupo
-
-* Gabriel Andrade Carvalho,
-* Guilherme Bernardes Camilo,
-* Erick Gabriel Cardoso Oliveira,
-* Gabriel Ribeiro Gomes.
+Documentação central do repositório contendo os artefatos, requisitos e código-fonte desenvolvidos para a unidade curricular de **Programação Orientada a Objetos (POO)**.
 
 ---
 
-## 📦 Itens da Avaliação
+## 👥 Integrantes do Grupo (Grupo 7)
+
+* Gabriel Andrade Carvalho
+* Guilherme Bernardes Camilo
+* Erick Gabriel Cardoso Oliveira
+* Gabriel Ribeiro Gomes
+
+---
+
+## 📋 Resumo dos Itens da Avaliação
 
 ### Item 1 — Business Model Canvas (BMC)
+* **Descrição:** Elaboração dos 9 blocos do BMC direcionados ao Sistema de Gestão de Condomínio, estruturando a proposta de valor, segmentos de clientes, fontes de receita e demais pilares do modelo de negócios.
 
-* **Descrição:** Preenchimento dos 9 blocos do BMC de forma pragmática para o projeto proposto pelo grupo (Sistema de Gestão de Condomínio), estruturando a primeira versão da modelagem de negócios.
+### Item 2 — Wireframes e Prototipagem (Figma)
+* **Descrição:** Mapeamento dos perfis de usuário (Síndico, Porteiro, Chefe de Manutenção, Moradores e Visitantes) e criação dos wireframes de baixa fidelidade no Figma, validados para acesso público em aba anônima.
 
-### Item 2 — Telas e Wireframes (Figma)
+### Item 3 — Pesquisa Bibliográfica em POO
+* **Descrição:** Estudo teórico fundamentado nas referências da disciplina sobre os 4 pilares da Orientação a Objetos (*Abstração, Encapsulamento, Herança e Polimorfismo*), acompanhado de citações literais e tópicos para discussão.
 
-* **Descrição:**
+### Item 4 — Projeto Java (`gestao-condominio`)
+* **Descrição:** Desenvolvimento incremental de 20 exercícios práticos evolutivos em Java, consolidando conceitos de tipos primitivos, estruturas de decisão/repetição, criação de classes, encapsulamento, sobrescrita, sobrecarga e controle do fluxo da aplicação em um menu interativo.
 
-  * Identificação dos usuários do sistema (Síndico, Porteiro, Chefe de manutenção, Moradores, Visitantes).
-  * Elaboração de wireframes em baixa fidelidade no Figma.
-  * Disponibilização de link público e acessível sem autenticação (testado rigorosamente em aba anônima).
-
-### Item 3 — Pesquisa Bibliográfica de POO
-
-* **Descrição:**
-
-  * Pesquisa baseada nas referências oficiais do plano de ensino (como a bibliografia básica da disciplina).
-  * Apresentação das definições dos pilares da POO (Encapsulamento, Herança, Polimorfismo e Abstração) sob o ponto de vista dos autores, incluindo citações literais.
-  * Levantamento e discussão em grupo de conceitos que geraram dúvidas para debater nas próximas aulas.
-
-### Item 4 — Lista de Exercícios em Java (`gestao-condominio`)
-
-* **Descrição:**
-
-  * Implementação incremental de 20 exercícios em Java estruturados de forma progressiva (variáveis, leitura com `Scanner`, estruturas condicionais, laços de repetição, criação de classes, objetos, encapsulamento, herança, sobrescrita/sobrecarga de métodos e menus interativos de terminal).
-  * O código evolui de forma que o exercício seguinte substitui/refatora o anterior, resultando em um projeto completo entregue em formato `.zip` (`grupo_N_projeto.zip`).
+---
 
 ## 📂 Estrutura do Repositório
 
-O projeto está organizado modularmente para atender aos 4 itens exigidos na atividade avaliativa:
+O projeto está estruturado e organizado da seguinte forma:
 
 ```text
-/
-├── docs/                 # Documentação e artefatos da atividade
-│   ├── Business.Model.Canvas.-.Sistem...  # Modelo de negócio do sistema
-│   ├── ITEM3.md          # Documentação referente ao Item 3
-│   ├── figma.md          # Referências ou anotações do Figma
-│   └── grupo_7_docs.pdf  # PDF consolidado oficial do grupo
+.
+├── docs/                                 # Documentação e artefatos de entrega
+│   ├── Business.Model.Canvas.-.Sistem... # Modelo de negócio do sistema
+│   ├── ITEM3.md                          # Pesquisa bibliográfica de POO
+│   ├── figma.md                          # Links e referências dos wireframes
+│   └── grupo_7_docs.pdf                  # Documento oficial consolidado (Itens 1, 2 e 3)
 │
-├── src/                  # Código-fonte do projeto
+├── src/
+│   └── gestao/                           # Código-fonte do projeto Java
+│       ├── App.java                      # Classe principal (Menu interativo e fluxo)
+│       ├── Cobertura.java                # Subclasse especializada de Unidade
+│       ├── Condominio.java               # Regras de caixa e recebimentos/despesas
+│       ├── Funcionario.java              # Classe base de colaboradores
+│       ├── Morador.java                  # Modelo de dados dos moradores
+│       ├── Unidade.java                  # Modelo de dados e taxas condominiais
+│       └── Zelador.java                  # Subclasse especializada de Funcionario
 │
-├── .gitignore
-└── README.md             # Visão geral e mapeamento do projeto
-```
+├── .gitignore                            # Arquivos ignorados pelo Git
+└── README.md                             # Visão geral do repositório
