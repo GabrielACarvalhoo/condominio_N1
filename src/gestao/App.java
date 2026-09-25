@@ -92,11 +92,44 @@ public class App {
                 System.out.printf("Cobertura 201 com multa: R$ %.2f%n", cobertura201.calcularTaxa(percentual));
             } else if (opcao == 6) {
                 System.out.println("\n--- REGISTRAR PAGAMENTO ---");
-                double valor = unidade101.calcularTaxa();
+                System.out.println("1 - Unidade 101");
+                System.out.println("2 - Unidade 102");
+                System.out.println("3 - Cobertura 201");
+                System.out.println("4 - Cobertura 202");
+                System.out.print("Escolha a unidade: ");
+
+                int escolhaUnidade = leitura.nextInt();
+
+                double valor = 0;
+                int numeroUnidade = 0;
+
+                if (escolhaUnidade == 1) {
+                    valor = unidade101.calcularTaxa();
+                    numeroUnidade = unidade101.getNumero();
+
+                } else if (escolhaUnidade == 2) {
+                    valor = unidade102.calcularTaxa();
+                    numeroUnidade = unidade102.getNumero();
+
+                } else if (escolhaUnidade == 3) {
+                    valor = cobertura201.calcularTaxa();
+                    numeroUnidade = cobertura201.getNumero();
+
+                } else if (escolhaUnidade == 4) {
+                    valor = cobertura202.calcularTaxa();
+                    numeroUnidade = cobertura202.getNumero();
+
+                } else {
+                    System.out.println("Unidade inválida!");
+                    continue;
+                }
+
                 condominio.receberPagamento(valor);
-                System.out.println("Unidade: " + unidade101.getNumero());
+
+                System.out.println("Unidade: " + numeroUnidade);
                 System.out.printf("Valor pago: R$ %.2f%n", valor);
-                System.out.printf("Saldo do condomínio: R$ %.2f%n", condominio.getSaldoCaixa());
+                System.out.printf("Saldo do condomínio: R$ %.2f%n",
+                condominio.getSaldoCaixa());
             } else if (opcao == 7) {
                 System.out.print("\nDigite o valor da despesa a pagar: R$ ");
                 double despesa = leitura.nextDouble();
