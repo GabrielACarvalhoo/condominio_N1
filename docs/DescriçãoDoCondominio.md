@@ -1,6 +1,7 @@
 Part 2 do projeto...
 
-##Grupo:
-///
-Gabriel Andrade, Gabriel Ribeiro, Guilherme Bernardese e Erick Gabriel.
-///
+<h1 align="center"> Grupo  </h1> 
+
+<p aling = "center">Gabriel Andrade, Gabriel Ribeiro, Guilherme Bernardese e Erick Gabriel.</p>
+
+
