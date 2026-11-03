@@ -311,6 +311,7 @@ flowchart TB
     V --> UC19
     V --> UC13
 ```
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/80f61c4f-2b80-4f85-bc25-a5dfea488056" />
 
 ### 4.3. Considerações sobre o Diagrama
 
