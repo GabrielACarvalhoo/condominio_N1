@@ -5,7 +5,7 @@ Part 2 do projeto...
 <h1 align="center">Grupo POO N1 - 7</h1>
 
 <p align="center">
-  Gabriel Andrade, Gabriel Ribeiro, Guilherme Bernardese e Erick Gabriel.
+  Gabriel Andrade, Gabriel Ribeiro, Guilherme Bernardes e Erick Gabriel.
 </p>
 
 ## 1. Objetivo do Projeto
