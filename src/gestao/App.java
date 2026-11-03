@@ -9,10 +9,10 @@ public class App {
         System.out.println("Digite o nome do condomínio:");
         String nomeCondominio = leitura.nextLine();
 
-        // Instancia o condomínio central
+       
         Condominio condominio = new Condominio(nomeCondominio, 2000.00);
 
-        // Populando dados iniciais padrão para demonstração integrada
+        
         condominio.adicionarUnidade(new Unidade(101, 450.00));
         condominio.adicionarUnidade(new Unidade(102, 450.00, false));
         condominio.adicionarUnidade(new Cobertura(201, 450.00));
