@@ -11,7 +11,7 @@ public class SistemaCondominioCollections {
     public static void main(String[] args) {
         System.out.println("=== DEMONSTRAÇÃO DE COLLECTIONS NO SISTEMA DE CONDOMÍNIO ===\n");
 
-        // 1. ARRAYLIST: Ideal para listas ordenadas onde a ordem de inserção importa (ex: Histórico de Encomendas)
+        
         List<String> historicoEncomendas = new ArrayList<>();
         historicoEncomendas.add("Encomenda recepcionada para a Unidade 101 - Correios");
         historicoEncomendas.add("Encomenda recepcionada para a Cobertura 201 - Amazon");
@@ -22,7 +22,7 @@ public class SistemaCondominioCollections {
             System.out.println("-> " + encomenda);
         }
 
-        // 2. HASHSET: Ideal para garantir elementos únicos, evitando duplicidade (ex: Controle de CPFs cadastrados ou acessos únicos)
+       
         Set<String> cpfsCadastrados = new HashSet<>();
         cpfsCadastrados.add("11111111111");
         cpfsCadastrados.add("98765432111");
@@ -36,7 +36,7 @@ public class SistemaCondominioCollections {
             System.out.println("-> CPF: " + cpf);
         }
 
-        // 3. HASHMAP: Ideal para buscas rápidas baseadas em chave-valor (ex: Mapear número da Unidade ao Nome do Morador responsável)
+        
         Map<Integer, String> moradoresPorUnidade = new HashMap<>();
         moradoresPorUnidade.put(101, "Carlos Silva");
         moradoresPorUnidade.put(102, "Mariana Costa");
@@ -47,7 +47,7 @@ public class SistemaCondominioCollections {
             System.out.println("Unidade " + entry.getKey() + " pertence ao morador: " + entry.getValue());
         }
 
-        // Exemplo de busca rápida por chave no HashMap
+        
         int unidadeBusca = 201;
         System.out.println("\nBusca rápida no HashMap para a Unidade " + unidadeBusca + ":");
         System.out.println("-> Morador encontrado: " + moradoresPorUnidade.get(unidadeBusca));
