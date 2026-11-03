@@ -5,36 +5,36 @@ Sistema desenvolvido para auxiliar na administração de condomínios, centraliz
 ---
 
 ## 👥 Grupo (POO N1-7)
-* Gabriel Andrade[cite: 1]
-* Gabriel Ribeiro[cite: 1]
-* **Guilherme Bernardes**[cite: 1]
-* Erick Gabriel[cite: 1]
+* Gabriel Andrade
+* Gabriel Ribeiro
+* Guilherme Bernardes
+* Erick Gabriel
 
 ---
 
 ## 🚀 Sobre o Projeto
-O objetivo principal é otimizar a comunicação entre moradores e a administração, proporcionando um controle rigoroso de acesso, gerenciamento de encomendas, reservas de espaços comuns, controle de veículos/vagas, além de demandas financeiras e de infraestrutura[cite: 1].
+O objetivo principal é otimizar a comunicação entre moradores e a administração, proporcionando um controle rigoroso de acesso, gerenciamento de encomendas, reservas de espaços comuns, controle de veículos/vagas, além de demandas financeiras e de infraestrutura
 
-O projeto está dividido em **12 módulos principais** estruturados em 6 agrupamentos lógicos[cite: 3]:
+O projeto está dividido em **12 módulos principais** estruturados em 6 agrupamentos lógicos
 
 1. **Gestão de Acesso e Portaria:**
-   * Controle e autorização de visitantes[cite: 1].
-   * Gestão e rastreio de encomendas[cite: 1].
-   * Registro de ocorrências da portaria[cite: 1].
+   * Controle e autorização de visitantes
+   * Gestão e rastreio de encomendas
+   * Registro de ocorrências da portaria
 2. **Gestão de Áreas Comuns e Lazer:**
-   * Cadastro de espaços compartilhados (regras e capacidade)[cite: 1].
-   * Sistema de reservas, aprovação e consulta de disponibilidade[cite: 1, 2].
+   * Cadastro de espaços compartilhados (regras e capacidade)
+   * Sistema de reservas, aprovação e consulta de disponibilidade
 3. **Gestão de Garagem:**
-   * Cadastro de veículos e controle de vagas[cite: 2].
+   * Cadastro de veículos e controle de vagas
 4. **Gestão de Manutenção e Infraestrutura:**
-   * Abertura de chamados de reparos e manutenção[cite: 2].
-   * Histórico de serviços executados e atualização de status[cite: 2].
+   * Abertura de chamados de reparos e manutenção
+   * Histórico de serviços executados e atualização de status
 5. **Gestão Administrativa:**
-   * Gestão de moradores, inquilinos e unidades residenciais[cite: 2].
-   * Gestão de funcionários e cargos[cite: 2].
-   * Publicação de comunicados e disponibilização de documentos[cite: 2].
+   * Gestão de moradores, inquilinos e unidades residenciais
+   * Gestão de funcionários e cargos
+   * Publicação de comunicados e disponibilização de documentos
 6. **Gestão Financeira:**
-   * Consulta de taxas condominiais, acompanhamento de pagamentos e controle de inadimplência[cite: 2, 3].
+   * Consulta de taxas condominiais, acompanhamento de pagamentos e controle de inadimplência
 
 ---
 
@@ -46,9 +46,9 @@ O modelo físico e conceitual foi estruturado utilizando o **MySQL Workbench**, 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-* **Banco de Dados:** MySQL / MySQL Workbench[cite: 9]
-* **Linguagem (Backend / Lógica):** Java (Programação Orientada a Objetos - POO)[cite: 1, 14]
-* **Controle de Versão:** Git & GitHub[cite: 14]
+* **Banco de Dados:** MySQL / MySQL Workbench
+* **Linguagem (Backend / Lógica):** Java (Programação Orientada a Objetos - POO)
+* **Controle de Versão:** Git & GitHub
 
 ---
 
@@ -56,12 +56,12 @@ O modelo físico e conceitual foi estruturado utilizando o **MySQL Workbench**, 
 
 ### 1. Banco de Dados (MySQL)
 1. Certifique-se de ter o **MySQL** e o **MySQL Workbench** instalados.
-2. Execute o script SQL estrutural do projeto para criar a base de dados `gestao_condominio` e todas as suas tabelas e relacionamentos iniciais[cite: 9].
+2. Execute o script SQL estrutural do projeto para criar a base de dados `gestao_condominio` e todas as suas tabelas e relacionamentos iniciais
 
 ### 2. Código em Java (Collections / POO)
-Para executar as classes e estruturas desenvolvidas com Collections em Java (`ArrayList`, `HashSet`, `HashMap`)[cite: 14]:
+Para executar as classes e estruturas desenvolvidas com Collections em Java (`ArrayList`, `HashSet`, `HashMap`)
 1. Abra o projeto em sua IDE de preferência (como IntelliJ IDEA ou Eclipse).
-2. Compile e execute o arquivo `.java` correspondente à entrega solicitada[cite: 14].
+2. Compile e execute o arquivo `.java` correspondente à entrega solicitada
 
 ---
 
