@@ -11,11 +11,11 @@ public class Condominio {
     private String nome;
     private double saldoCaixa;
 
-    // Collections integradas ao sistema
-    private List<Unidade> unidades;             // ArrayList para armazenar todas as unidades
-    private Map<String, Morador> moradoresCpf;   // HashMap para buscar moradores rapidamente por CPF (Chave: CPF, Valor: Morador)
-    private Set<String> cpfsRegistrados;         // HashSet para garantir que não haja CPFs duplicados
-    private List<Funcionario> funcionarios;     // ArrayList para o quadro de funcionários
+    
+    private List<Unidade> unidades;             
+    private Map<String, Morador> moradoresCpf;   
+    private Set<String> cpfsRegistrados;        
+    private List<Funcionario> funcionarios;     
 
     public Condominio(String nome, double saldoInicial) {
         this.nome = nome;
@@ -26,18 +26,18 @@ public class Condominio {
         this.funcionarios = new ArrayList<>();
     }
 
-    // Métodos de gerenciamento integrados
+    
     public void adicionarUnidade(Unidade unidade) {
         this.unidades.add(unidade);
     }
 
     public boolean cadastrarMorador(Morador morador) {
-        // Usa o HashSet para verificar unicidade do CPF
+       
         if (cpfsRegistrados.add(morador.getCpf())) {
             moradoresCpf.put(morador.getCpf(), morador);
             return true;
         }
-        return false; // CPF já cadastrado
+        return false; 
     }
 
     public void adicionarFuncionario(Funcionario funcionario) {
@@ -64,7 +64,7 @@ public class Condominio {
         }
     }
 
-    // Getters para exibição
+    
     public List<Unidade> getUnidades() { return unidades; }
     public Map<String, Morador> getMoradoresCpf() { return moradoresCpf; }
     public List<Funcionario> getFuncionarios() { return funcionarios; }
