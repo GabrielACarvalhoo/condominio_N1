@@ -31,6 +31,13 @@ public class Condominio {
         this.unidades.add(unidade);
     }
 
+    public boolean removerUnidade(int numero) {
+
+    return unidades.removeIf(
+        unidade -> unidade.getNumero() == numero
+    );
+    }    
+
     public boolean cadastrarMorador(Morador morador) {
        
         if (cpfsRegistrados.add(morador.getCpf())) {
@@ -38,6 +45,11 @@ public class Condominio {
             return true;
         }
         return false; 
+    }
+
+    public Morador buscarMorador(String cpf) {
+
+    return moradoresCpf.get(cpf);
     }
 
     public void adicionarFuncionario(Funcionario funcionario) {
