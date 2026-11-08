@@ -1,6 +1,6 @@
 package gestao;
 
-public class Funcionario extends Pessoa {
+public class Funcionario extends Pessoa implements Calculavel {
     private String nome;
     protected double salarioBase;
 
@@ -27,5 +27,9 @@ public class Funcionario extends Pessoa {
     @Override
     public void exibirIdentificacao() {
         System.out.println("Funcionário: " + nome);
+}
+    @Override
+    public double calcularValor() {
+        return calcularSalario();
 }
 }
