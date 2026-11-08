@@ -26,6 +26,18 @@ public class App {
         condominio.adicionarFuncionario(new Funcionario("Paulo Pedro", 2500.00));
         condominio.adicionarFuncionario(new Zelador("Marcos Souza", 3000.00));
 
+            for (Unidade unidade : condominio.getUnidades()) {
+            
+                System.out.println(
+                    "Unidade " + unidade.getNumero()
+                );
+            
+                System.out.printf(
+                    "Taxa calculada: R$ %.2f%n",
+                    unidade.calcularTaxa()
+                );
+            }        
+
         int opcao = -1;
 
         while (opcao != 0) {
