@@ -1,4 +1,3 @@
-
 package gestao;
 
 import jakarta.persistence.Entity;
@@ -23,7 +22,7 @@ public class Morador extends Pessoa {
     private int numeroUnidade;
 
     public Morador() {
-        super();
+        super("");
     }
 
     public Morador(String nome, String cpf, int numeroUnidade) {
@@ -32,8 +31,8 @@ public class Morador extends Pessoa {
         this.numeroUnidade = numeroUnidade;
     }
 
-    public Long getId() {
-        return id;
+    public String getNome() {
+        return nome;
     }
 
     public String getCpf() {
@@ -45,17 +44,23 @@ public class Morador extends Pessoa {
     }
 
     public void exibirDados() {
-        System.out.println("Morador: " + nome + " | CPF: " + cpf + " | Unidade: " + numeroUnidade);
-    }
-
-    @Override
-    public String toString() {
-        return String.format("Morador: %s | CPF: %s | Unidade: %d",
-                nome, cpf, numeroUnidade);
+        System.out.println(
+            "Morador: " + nome +
+            " | CPF: " + cpf +
+            " | Unidade: " + numeroUnidade
+        );
     }
 
     @Override
     public void exibirIdentificacao() {
         System.out.println("Morador: " + nome);
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+            "Morador: %s | CPF: %s | Unidade: %d",
+            nome, cpf, numeroUnidade
+        );
     }
 }
