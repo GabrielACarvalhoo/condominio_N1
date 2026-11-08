@@ -8,7 +8,6 @@ public class App {
 
         System.out.println("Digite o nome do condomínio:");
         String nomeCondominio = leitura.nextLine();
-
        
         Condominio condominio = new Condominio(nomeCondominio, 2000.00);
 
@@ -36,7 +35,22 @@ public class App {
                     "Taxa calculada: R$ %.2f%n",
                     unidade.calcularTaxa()
                 );
-            }        
+            }
+        
+        Calculavel calculoUnidade = new Unidade(301, 450.00);
+
+            Calculavel calculoFuncionario =
+                    new Funcionario("João", 2500.00);
+            
+            System.out.printf(
+                "Valor da unidade: R$ %.2f%n",
+                calculoUnidade.calcularValor()
+            );
+            
+            System.out.printf(
+                "Valor do funcionário: R$ %.2f%n",
+                calculoFuncionario.calcularValor()
+            );
 
         int opcao = -1;
 
