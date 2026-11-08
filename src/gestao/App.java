@@ -106,10 +106,26 @@ public class App {
                 } else {
                     System.out.println("Índice inválido!");
                 }
-            } else if (opcao == 6) {
-                System.out.print("\nDigite o valor da despesa a pagar: R$ ");
-                double despesa = leitura.nextDouble();
-                condominio.pagarDespesa(despesa);
+            } } else if (opcao == 6) {
+
+                    System.out.print(
+                        "\nDigite o valor da despesa a pagar: R$ "
+                    );
+                
+                    double despesa = leitura.nextDouble();
+                
+                    try {
+                        condominio.pagarDespesa(despesa);
+                
+                    } catch (SaldoInsuficienteException e) {
+                
+                        System.out.println("Erro: " + e.getMessage());
+                
+                    } catch (IllegalArgumentException e) {
+                
+                        System.out.println("Erro: " + e.getMessage());
+                    }
+                }
             } else if (opcao == 0) {
                 System.out.println("\nSaindo do sistema... Até logo!");
             } else {
