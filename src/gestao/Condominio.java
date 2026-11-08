@@ -53,16 +53,29 @@ public class Condominio {
         }
     }
 
-    public void pagarDespesa(double valor) {
-        if (valor <= 0) {
-            System.out.println("Erro: O valor da despesa deve ser positivo.");
-        } else if (valor > this.saldoCaixa) {
-            System.out.printf("Erro: Saldo insuficiente! Saldo atual: R$ %.2f | Despesa: R$ %.2f%n", this.saldoCaixa, valor);
-        } else {
-            this.saldoCaixa -= valor;
-            System.out.printf("Despesa de R$ %.2f paga com sucesso!%n", valor);
-        }
+   public void pagarDespesa(double valor)
+        throws SaldoInsuficienteException {
+
+    if (valor <= 0) {
+        throw new IllegalArgumentException(
+            "O valor da despesa deve ser positivo."
+        );
     }
+
+    if (valor > this.saldoCaixa) {
+        throw new SaldoInsuficienteException(
+            "Saldo insuficiente! Saldo atual: R$ "
+            + this.saldoCaixa
+        );
+    }
+
+    this.saldoCaixa -= valor;
+
+    System.out.printf(
+        "Despesa de R$ %.2f paga com sucesso!%n",
+        valor
+    );
+}
 
     
     public List<Unidade> getUnidades() { return new ArrayList<>(unidades); }
