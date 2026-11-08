@@ -65,9 +65,9 @@ public class Condominio {
     }
 
     
-    public List<Unidade> getUnidades() { return unidades; }
-    public Map<String, Morador> getMoradoresCpf() { return moradoresCpf; }
-    public List<Funcionario> getFuncionarios() { return funcionarios; }
+    public List<Unidade> getUnidades() { return new ArrayList<>(unidades); }
+    public Map<String, Morador> getMoradoresCpf() {  return new HashMap<>(moradoresCpf); }
+    public List<Funcionario> getFuncionarios() { return new ArrayList<>(funcionarios); }
     public String getNome() { return nome; }
     public double getSaldoCaixa() { return saldoCaixa; }
 }
