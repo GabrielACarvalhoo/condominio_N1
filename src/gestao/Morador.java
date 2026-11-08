@@ -1,9 +1,30 @@
+
 package gestao;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Column;
+
+@Entity
+@Table(name = "morador")
 public class Morador extends Pessoa {
-    private String nome;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true, length = 11)
     private String cpf;
+
+    @Column(name = "numero_unidade")
     private int numeroUnidade;
+
+    public Morador() {
+        super();
+    }
 
     public Morador(String nome, String cpf, int numeroUnidade) {
         super(nome);
@@ -11,8 +32,8 @@ public class Morador extends Pessoa {
         this.numeroUnidade = numeroUnidade;
     }
 
-    public String getNome() {
-        return nome;
+    public Long getId() {
+        return id;
     }
 
     public String getCpf() {
@@ -29,11 +50,12 @@ public class Morador extends Pessoa {
 
     @Override
     public String toString() {
-        return String.format("Morador: %s | CPF: %s | Unidade: %d", nome, cpf, numeroUnidade);
+        return String.format("Morador: %s | CPF: %s | Unidade: %d",
+                nome, cpf, numeroUnidade);
     }
 
     @Override
     public void exibirIdentificacao() {
         System.out.println("Morador: " + nome);
-}
+    }
 }
