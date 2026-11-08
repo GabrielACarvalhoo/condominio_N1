@@ -1,11 +1,11 @@
 package gestao;
 
-public class Funcionario {
+public class Funcionario extends Pessoa {
     private String nome;
     protected double salarioBase;
 
     public Funcionario(String nome, double salarioBase) {
-        this.nome = nome;
+        super(nome);
         this.salarioBase = salarioBase;
     }
 
@@ -24,4 +24,8 @@ public class Funcionario {
     public String toString() {
         return String.format("Funcionário: %s | Salário Base: R$ %.2f", nome, calcularSalario());
     }
+    @Override
+    public void exibirIdentificacao() {
+        System.out.println("Funcionário: " + nome);
+}
 }
