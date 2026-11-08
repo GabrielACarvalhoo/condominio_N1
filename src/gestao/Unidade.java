@@ -1,6 +1,6 @@
 package gestao;
 
-public class Unidade {
+public class Unidade implements Calculavel {
     private int numero;
     private double taxaBase;
     private boolean ocupada;
@@ -58,4 +58,8 @@ public class Unidade {
         String status = ocupada ? "Ocupada" : "Desocupada";
         return String.format("Unidade %d | Taxa: R$ %.2f | Status: %s", numero, calcularTaxa(), status);
     }
+    @Override
+    public double calcularValor() {
+        return calcularTaxa();
+}
 }
