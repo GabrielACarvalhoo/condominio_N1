@@ -1,12 +1,12 @@
 package gestao;
 
-public class Morador {
+public class Morador extends Pessoa {
     private String nome;
     private String cpf;
     private int numeroUnidade;
 
     public Morador(String nome, String cpf, int numeroUnidade) {
-        this.nome = nome;
+        super(nome);
         this.cpf = cpf;
         this.numeroUnidade = numeroUnidade;
     }
@@ -31,4 +31,9 @@ public class Morador {
     public String toString() {
         return String.format("Morador: %s | CPF: %s | Unidade: %d", nome, cpf, numeroUnidade);
     }
+
+    @Override
+    public void exibirIdentificacao() {
+        System.out.println("Morador: " + nome);
+}
 }
