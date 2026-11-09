@@ -36,15 +36,26 @@ public class Condominio {
     return unidades.removeIf(
         unidade -> unidade.getNumero() == numero
     );
-    }    
+    }
 
     public boolean cadastrarMorador(Morador morador) {
-       
-        if (cpfsRegistrados.add(morador.getCpf())) {
-            moradoresCpf.put(morador.getCpf(), morador);
+
+        if (morador == null || morador.getCpf() == null) {
+            return false;
+        }
+
+        String cpf = morador.getCpf();
+
+        if (!cpf.matches("\\d{11}")) {
+            return false;
+        }
+
+        if (cpfsRegistrados.add(cpf)) {
+            moradoresCpf.put(cpf, morador);
             return true;
         }
-        return false; 
+
+        return false;
     }
 
     public Morador buscarMorador(String cpf) {

@@ -8,10 +8,10 @@ public class App {
 
         System.out.println("Digite o nome do condomínio:");
         String nomeCondominio = leitura.nextLine();
-       
+
         Condominio condominio = new Condominio(nomeCondominio, 2000.00);
 
-        
+
         condominio.adicionarUnidade(new Unidade(101, 450.00));
         condominio.adicionarUnidade(new Unidade(102, 450.00, false));
         condominio.adicionarUnidade(new Cobertura(201, 450.00));
@@ -25,32 +25,32 @@ public class App {
         condominio.adicionarFuncionario(new Funcionario("Paulo Pedro", 2500.00));
         condominio.adicionarFuncionario(new Zelador("Marcos Souza", 3000.00));
 
-            for (Unidade unidade : condominio.getUnidades()) {
-            
-                System.out.println(
+        for (Unidade unidade : condominio.getUnidades()) {
+
+            System.out.println(
                     "Unidade " + unidade.getNumero()
-                );
-            
-                System.out.printf(
+            );
+
+            System.out.printf(
                     "Taxa calculada: R$ %.2f%n",
                     unidade.calcularTaxa()
-                );
-            }
-        
+            );
+        }
+
         Calculavel calculoUnidade = new Unidade(301, 450.00);
 
-            Calculavel calculoFuncionario =
-                    new Funcionario("João", 2500.00);
-            
-            System.out.printf(
+        Calculavel calculoFuncionario =
+                new Funcionario("João", 2500.00);
+
+        System.out.printf(
                 "Valor da unidade: R$ %.2f%n",
                 calculoUnidade.calcularValor()
-            );
-            
-            System.out.printf(
+        );
+
+        System.out.printf(
                 "Valor do funcionário: R$ %.2f%n",
                 calculoFuncionario.calcularValor()
-            );
+        );
 
         int opcao = -1;
 
@@ -65,7 +65,13 @@ public class App {
             System.out.println("0 - Sair");
             System.out.print("Escolha uma opção: ");
 
-            opcao = leitura.nextInt();
+            if (leitura.hasNextInt()) {
+                opcao = leitura.nextInt();
+            } else {
+                System.out.println("Entrada inválida! Digite um número.");
+                leitura.next();
+                continue;
+            }
 
             if (opcao == 1) {
                 System.out.println("\n===== CONDOMÍNIO =====");
@@ -106,29 +112,33 @@ public class App {
                 } else {
                     System.out.println("Índice inválido!");
                 }
-            } } else if (opcao == 6) {
 
-                    System.out.print(
+            } else if (opcao == 6) {
+
+                System.out.print(
                         "\nDigite o valor da despesa a pagar: R$ "
-                    );
-                
-                    double despesa = leitura.nextDouble();
-                
-                    try {
-                        condominio.pagarDespesa(despesa);
-                
-                    } catch (SaldoInsuficienteException e) {
-                
-                        System.out.println("Erro: " + e.getMessage());
-                
-                    } catch (IllegalArgumentException e) {
-                
-                        System.out.println("Erro: " + e.getMessage());
-                    }
+                );
+
+                double despesa = leitura.nextDouble();
+
+                try {
+                    condominio.pagarDespesa(despesa);
+
+                } catch (SaldoInsuficienteException e) {
+
+                    System.out.println("Erro: " + e.getMessage());
+
+                } catch (IllegalArgumentException e) {
+
+                    System.out.println("Erro: " + e.getMessage());
                 }
+
             } else if (opcao == 0) {
+
                 System.out.println("\nSaindo do sistema... Até logo!");
+
             } else {
+
                 System.out.println("\nOpção inválida! Tente novamente.");
             }
         }

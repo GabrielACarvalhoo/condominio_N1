@@ -22,7 +22,7 @@ public class Morador extends Pessoa {
     private int numeroUnidade;
 
     public Morador() {
-        super("");
+        super();
     }
 
     public Morador(String nome, String cpf, int numeroUnidade) {
